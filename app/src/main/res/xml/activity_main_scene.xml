@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ramadan_moon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ramadan_kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ramadan Kareem!"
+            android:textSize="32sp"
+            android:fontFamily="cursive"
+            android:textColor="@color/RamadanPlatte2"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/large_container"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="32dp"
+            android:paddingTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ramadan_moon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/ramadan_kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ramadan Kareem!"
+            android:textSize="32sp"
+            android:fontFamily="cursive"
+            android:textColor="@color/RamadanPlatte2"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@drawable/large_container"
+            android:elevation="@dimen/cardview_compat_inset_shadow"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingLeft="32dp"
+            android:paddingTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:layout_marginTop="-45dp" />
+        <Constraint
+            android:layout_height="140dp"
+            android:layout_width="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/card1" />
+        <Constraint
+            android:layout_height="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:id="@+id/card2" />
+        <Constraint
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="150dp"
+            android:id="@+id/card3" />
+        <Constraint
+            android:layout_height="140dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:id="@+id/card4"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <Constraint
+            android:id="@+id/reminder"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp" />
+    </ConstraintSet>
+
+    <Transition
+    app:constraintSetEnd="@id/end"
+    app:constraintSetStart="@+id/start">
+    <OnSwipe app:touchAnchorId="@id/ramadan_kareem"
+        app:dragDirection="dragDown"/>
+</Transition>
+</MotionScene>
